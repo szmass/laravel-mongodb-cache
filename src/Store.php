@@ -44,13 +44,11 @@ class Store extends DatabaseStore
      */
     public function put($key, $value, $minutes, $tags = [])
     {
-        $expiration = ($this->getTime() + (int) ($minutes * 60)) * 1000;
-
         try {
             return (bool) $this->table()->where('key', $this->getKeyWithPrefix($key))->update(
                     [
                         'value' => $this->encodeForSave($value),
-                        'expiration' => new UTCDateTime($expiration),
+                        'createdAt' => new UTCDateTime(),
                         'tags' => $tags
                     ],
                 ['upsert' => true]

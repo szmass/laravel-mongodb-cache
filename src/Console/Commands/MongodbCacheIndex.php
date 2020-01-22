@@ -45,9 +45,9 @@ class MongodbCacheIndex extends Command
                     'background' => true
                 ],
                 [
-                    'key' => ['expiration' => 1],
-                    'name' => 'expiration_ttl_1',
-                    'expireAfterSeconds' => 0,
+                    'key' => ['createdAt' => 1],
+                    'name' => 'created_at_ttl_1',
+                    'expireAfterSeconds' => 240,
                     'background' => true
                 ]
             ]
