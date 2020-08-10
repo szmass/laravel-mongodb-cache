@@ -4,8 +4,8 @@
     "type": "library",
     "version": "2.10",
     "require": {
-        "jenssegers/mongodb": ">=3.*",
-        "illuminate/cache": ">=5.*"
+        "jenssegers/mongodb": ">=3.0",
+        "illuminate/cache": ">=5.0"
     },
     "license": "MIT",
     "authors": [
